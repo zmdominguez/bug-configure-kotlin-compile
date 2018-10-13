@@ -10,9 +10,6 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import com.zdominguez.sdksandbox.databinding.ActivityReadableTextBinding;
 
 /**
