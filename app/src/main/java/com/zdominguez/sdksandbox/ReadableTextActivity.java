@@ -1,5 +1,6 @@
 package com.zdominguez.sdksandbox;
 
+import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import com.zdominguez.sdksandbox.databinding.ActivityReadableTextBinding;
 
 /**
  * Inspired by https://twitter.com/ThePracticalDev/status/805575351522967553 and practically
@@ -20,22 +22,21 @@ import butterknife.OnClick;
 public class ReadableTextActivity extends AppCompatActivity {
 
     private static final String TAG = "ReadableTextActivity";
-    @BindView(R.id.input_colour)
     EditText inputColour;
 
-    @BindView(R.id.output)
     TextView output;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_readable_text);
-        ButterKnife.bind(this);
+        ActivityReadableTextBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_readable_text);
+        binding.setHandlers(this);
+        inputColour = binding.inputColour;
+        output = binding.output;
 
         //TODO allow dropdown of named colours
     }
 
-    @OnClick(R.id.submit_colour)
     public void submitColour() {
         String inputString = "#" + inputColour.getText().toString();
         final int color = sanitiseInput(inputString);
