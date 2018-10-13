@@ -16,50 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity
-            android:name=".PercentInListActivity"
-            android:label="@string/title_activity_percent_in_list">
-        </activity>
-        <activity
-            android:name=".ResourceAnnotationsActivity"
-            android:label="Annotations">
-        </activity>
-        <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".PercentLayoutActivity"
-            android:label="33%!">
-        </activity>
-
-        <activity
-            android:name=".LinearLayoutActivity"
-            android:label="LinearLayoutDemo">
-        </activity>
-
-        <activity
-            android:name=".RecyclerViewViewStubs"
-            android:label="RecyclerView + ViewStubs">
-        </activity>
-
-        <activity
-            android:name=".DataBindingSpans"
-            android:label="DataBinding + Spans">
-        </activity>
-        <activity android:name=".ConstraintLayoutDemo"
-                  android:label="Constraint Layout" />
         <activity android:name=".ReadableTextActivity"
                   android:label="Readable Text" />
-        <activity android:name=".bottomsheet.BottomSheetShare"/>
-        <activity android:name=".bottomsheet.CustomShareActivity"
-            android:label="Choose Me!"/>
     </application>
 
 </manifest>
